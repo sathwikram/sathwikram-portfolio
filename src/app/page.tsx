@@ -16,60 +16,60 @@ const techRow2 = ["Supabase","Drizzle ORM","BullMQ","Azure Service Bus","Grafana
 
 const projects = [
   {
-    name: "PillPlus",
-    tagline: "B2C Medicine Delivery",
-    description: "Consumer-facing medicine delivery with real-time tracking, AI-powered product search via Typesense, PayU payments, and async order processing via BullMQ workers.",
-    stack: ["Next.js","ElysiaJS","Bun","Drizzle ORM","Supabase","AI SDK","PayU"],
-    type: "Production",
-    featured: true,
-  },
-  {
     name: "SmartPharma360",
-    tagline: "Multi-tenant Pharma SaaS",
-    description: "Full pharma management platform — RMS + DMS modules, billing, inventory, and financial compliance across 3000+ commits and 8+ Azure VMs in production.",
-    stack: ["Node.js","React","TypeScript","PostgreSQL","Azure","Redis"],
+    tagline: "Full pharma supply chain SaaS — Manufacturing · Distribution · Retail",
+    description: "Sole engineer owning the full stack for a multi-tenant pharma SaaS that covers the entire supply chain: manufacturing, C&F distribution, and retail pharmacy. 4 major modules (PMS, DMS, RMS, Sales Force Automation), 10+ web and mobile apps, 10M+ invoices processed, 200+ businesses across 80+ locations. Built the billing engine, multi-tenant data isolation, GST-compliant financial reporting, real-time inventory management, and managed 30+ Azure infrastructure nodes across production, staging, and UAT environments.",
+    stack: ["Node.js","React","TypeScript","PostgreSQL","Azure","Redis","Azure Service Bus","Azure Blob"],
     type: "Production",
     featured: true,
   },
   {
-    name: "Failproof Order Pipeline",
-    tagline: "Azure Service Bus + Edge Functions",
-    description: "Guaranteed-delivery order processing with dead-letter handling, automatic retry, and idempotent consumers. Zero message loss in production.",
-    stack: ["Azure Service Bus","Azure Functions","TypeScript","PostgreSQL"],
+    name: "PillPlus",
+    tagline: "B2C Medicine Delivery Platform",
+    description: "Consumer-facing medicine delivery built from zero — real-time order tracking, AI-powered product search via Typesense, PayU payment gateway, and reliable async order processing via BullMQ workers with retry and dead-letter handling.",
+    stack: ["Next.js","ElysiaJS","Bun","Drizzle ORM","Supabase","AI SDK","Typesense","PayU"],
+    type: "Production",
+    featured: true,
+  },
+  {
+    name: "Azure Service Bus Pipeline",
+    tagline: "Financial-grade message bus for POS, orders & internal jobs",
+    description: "Designed a guaranteed-delivery async pipeline handling POS payment processing, inward order management, and internal background jobs — all on Azure Service Bus with dead-letter queues, automatic retry, exponential backoff, and idempotent consumers. Zero transaction loss across all live POS terminals.",
+    stack: ["Azure Service Bus","Azure Functions","TypeScript","PostgreSQL","Dead-letter queues"],
     type: "Infrastructure",
     featured: false,
   },
   {
     name: "Micro Frontend Migration",
-    tagline: "Monolith → Module Federation",
-    description: "Decomposed a large React monolith into a Module Federation system on Turborepo — independent deployments per team, 60%+ faster builds.",
+    tagline: "Monolith → Module Federation at scale",
+    description: "Led the decomposition of a large React monolith into a Module Federation architecture on Turborepo — independent team deployments, 60%+ reduction in build times, and zero-downtime migration with feature-flag rollout.",
     stack: ["Module Federation","Turborepo","React","TypeScript","Webpack"],
     type: "Architecture",
     featured: false,
   },
   {
     name: "Observability Platform",
-    tagline: "Grafana · Prometheus · Loki",
-    description: "Full observability stack across 8+ Azure VMs — custom dashboards, multi-service alerting, structured log aggregation from scratch.",
-    stack: ["Grafana","Prometheus","Loki","Azure","Docker"],
+    tagline: "30+ node infrastructure visibility from scratch",
+    description: "Built end-to-end observability across 30+ Azure VMs spanning 4 products and 3 environments — custom Grafana dashboards per product team, multi-service Prometheus alerting, and structured Loki log aggregation. Reduced mean time to detect (MTTD) from hours to minutes.",
+    stack: ["Grafana","Prometheus","Loki","Azure","Docker","AlertManager"],
     type: "Infrastructure",
     featured: false,
   },
   {
     name: "Orderplus",
-    tagline: "B2B Order Management",
-    description: "Distributor-facing order management with Anthropic AI integration, OpenReplay session replay, Swagger docs, and JWT auth with refresh tokens.",
-    stack: ["Node.js","React","Anthropic SDK","OpenReplay","Swagger"],
+    tagline: "B2B Order Management — Distributor to Pharmacy",
+    description: "Distributor-facing order management connecting the DMS supply chain to downstream pharmacies — Anthropic AI for order intelligence, OpenReplay session replay for support, Swagger-documented APIs, and JWT auth with silent refresh.",
+    stack: ["Node.js","React","Anthropic SDK","OpenReplay","Swagger","JWT"],
     type: "Production",
     featured: false,
   },
 ];
 
 const stats = [
-  { value: 10, suffix: "+", label: "Years building" },
-  { value: 8, suffix: "+", label: "Azure VMs" },
-  { value: 3000, suffix: "+", label: "Commits on SP360" },
-  { value: 4, suffix: "", label: "LLM providers" },
+  { value: 10, suffix: "+", label: "Years building production SaaS" },
+  { value: 10, suffix: "M+", label: "Invoices processed" },
+  { value: 4, suffix: "", label: "Products shipped end-to-end" },
+  { value: 30, suffix: "+", label: "Infrastructure nodes managed" },
 ];
 
 const typeColors: Record<string, string> = {
@@ -79,14 +79,14 @@ const typeColors: Record<string, string> = {
 };
 
 const expPoints = [
-  "Architected SmartPharma360 — multi-tenant pharma SaaS with RMS, DMS, billing, and financial compliance. 3000+ commits, 8+ Azure VMs.",
-  "Built PillPlus from zero — B2C medicine delivery with Next.js, ElysiaJS/Bun, Drizzle ORM, AI search, and PayU payments.",
-  "Designed failproof Azure Service Bus + Edge Functions order pipeline — guaranteed delivery, dead-letter handling, zero message loss.",
-  "Led micro frontend migration: React monolith → Module Federation + Turborepo, cutting build times by 60%+.",
-  "Set up Grafana + Prometheus + Loki observability from scratch across 8+ Azure VMs.",
-  "Integrated Anthropic Claude, OpenAI, Google Gemini, and Fireworks AI across production products.",
-  "Built and published open-source Typesense MCP Server — listed on Smithery.",
-  "Managed full Azure infra: VMs, Blob Storage, Service Bus, Functions, Logic Apps, Form Recognizer.",
+  "Sole engineer owning the full stack for SmartPharma360 — a multi-tenant pharma supply chain SaaS covering manufacturing, distribution, and retail. 4 modules, 10+ apps, 10M+ invoices processed, 200+ businesses in production.",
+  "Designed a financial-grade Azure Service Bus pipeline handling POS payment processing, inward order management, and async internal jobs — dead-letter queues, automatic retry, idempotent consumers, zero transaction loss.",
+  "Built and shipped PillPlus end-to-end — B2C medicine delivery with AI-powered Typesense search, PayU payment gateway, and reliable async order processing via BullMQ.",
+  "Planned and executed micro frontend migration: React monolith → Module Federation on Turborepo with feature-flag rollout and 60%+ build time reduction.",
+  "Designed end-to-end observability from scratch across 30+ Azure infrastructure nodes (4 products, 3 environments) — Grafana dashboards, Prometheus alerting, Loki structured logging.",
+  "Integrated Anthropic Claude, OpenAI, Google Gemini, and Fireworks AI across multiple production products including order intelligence and search.",
+  "Built and published open-source Typesense MCP Server — listed on Smithery, enabling AI assistants to interact with Typesense search indexes directly.",
+  "Managed complete Azure cloud infrastructure: VMs, Blob Storage, Service Bus, Functions, Logic Apps, Form Recognizer, Application Insights — across prod, staging, and UAT.",
 ];
 
 export default function Home() {
@@ -146,9 +146,10 @@ export default function Home() {
 
           <BlurFade delay={0.42} inView>
             <p className="text-zinc-400 text-base sm:text-lg max-w-2xl leading-relaxed mb-12">
-              10+ years building production SaaS end-to-end —{" "}
-              <span className="text-zinc-200">distributed systems · platform engineering · AI integration.</span>
-              {" "}I own the full stack: from architecture to deployment to 3am monitoring.
+              10+ years building production SaaS end-to-end.{" "}
+              <span className="text-zinc-200">Distributed systems · platform engineering · AI integration.</span>
+              {" "}I&apos;ve shipped 4 products, processed 10M+ invoices, and managed 30+ infrastructure nodes —
+              as the sole engineer owning architecture, cloud, payments, and observability.
             </p>
           </BlurFade>
 
@@ -222,11 +223,12 @@ export default function Home() {
                   <span className="text-zinc-200">distributed systems reliability</span>,{" "}
                   <span className="text-zinc-200">platform engineering</span>, and{" "}
                   <span className="text-zinc-200">LLM integration</span> — the kind of work that ships
-                  features fast and keeps them running when it matters.
+                  features fast and keeps them running when it matters most.
                 </p>
-                <p className="text-zinc-300">
-                  I&apos;m actively looking for senior remote opportunities with teams in the{" "}
-                  <span className="text-indigo-400">US, EU, AU, or CA</span> who are building ambitious products.
+                <p>
+                  I&apos;ve owned the full engineering stack of a pharma supply chain SaaS from day one —
+                  architecture decisions, cloud infrastructure, payment systems, observability, and AI — without
+                  a separate DevOps, QA, or data team.
                 </p>
               </div>
             </BlurFade>
