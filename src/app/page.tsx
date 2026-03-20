@@ -37,7 +37,7 @@ const caseStudies = [
     problem:
       "The pharma supply chain ran on disconnected legacy systems. Distributors, C&F agents, and retail pharmacies couldn't share inventory data, reconcile billing in real time, or meet GST compliance requirements without manual intervention.",
     solution:
-      "Sole engineer who designed and built the entire platform — multi-tenant data architecture with strict tenant isolation, a financial-grade billing engine, Azure Service Bus for POS payment processing and async jobs, and 30+ infrastructure nodes managed across production, staging, and UAT.",
+      "Designed and built the entire platform from architecture to deployment — multi-tenant data model with strict tenant isolation, a financial-grade billing engine, Azure Service Bus for POS payment processing and async jobs, and 30+ infrastructure nodes managed across production, staging, and UAT.",
     outcome:
       "10M+ invoices processed across 200+ businesses and 80+ locations. GST-compliant billing with zero compliance failures. Platform became the operational backbone for multiple pharmacy chains.",
     metrics: ["10M+ invoices", "200+ businesses", "80+ locations", "0 billing failures"],
@@ -71,8 +71,8 @@ const caseStudies = [
     solution:
       "Built the entire platform end-to-end — Next.js storefront, ElysiaJS/Bun API, AI-powered Typesense search across a large medicine catalog, PayU payment gateway, and BullMQ workers for reliable async order processing with retry and dead-letter handling.",
     outcome:
-      "Live B2C platform with sub-200ms medicine search, real-time GPS order tracking, and reliable PayU payment processing — all built and shipped solo.",
-    metrics: ["Sub-200ms search", "Real-time GPS tracking", "Reliable payment flow", "Solo end-to-end"],
+      "Live B2C platform with sub-200ms medicine search, real-time GPS order tracking, and reliable PayU payment processing — built and shipped end-to-end.",
+    metrics: ["Sub-200ms search", "Real-time GPS tracking", "Reliable payment flow", "End-to-end ownership"],
     stack: ["Next.js", "ElysiaJS", "Bun", "Drizzle ORM", "Supabase", "Typesense", "BullMQ", "PayU"],
     featured: false,
   },
@@ -80,7 +80,7 @@ const caseStudies = [
 
 const expPoints = [
   {
-    bold: "Sole engineer owning the full stack for SmartPharma360",
+    bold: "Full-stack engineering ownership of SmartPharma360",
     rest: " — multi-tenant pharma supply chain SaaS covering manufacturing, distribution, and retail. 4 modules, 10+ apps, 10M+ invoices processed, 200+ businesses in production.",
   },
   {
